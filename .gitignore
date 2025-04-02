@@ -1,0 +1,10 @@
+# experiment results
+exp/
+
+# model weights
+checkpoints/
+
+*.egg-info/
+*.egg/
+
+**/__pycache__/
