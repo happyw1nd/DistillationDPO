@@ -44,7 +44,7 @@ Setup the code on the code main directory:
 
 ## **Training**
 
-We used The SemanticKITTI dataset for training.
+We use The SemanticKITTI dataset for training.
 
 The SemanticKITTI dataset has to be downloaded from the [official site](http://www.semantic-kitti.org/dataset.html#download) and extracted in the following structure:
 
@@ -74,7 +74,7 @@ Ground truth scenes are not provided explicitly in SemanticKITTI. To generate th
 python map_from_scans.py --path datasets/SemanticKITTI/dataset/sequences/
 ```
 
-We used the diffusion-dpo fine-tuned version of [LiDiff](https://github.com/PRBonn/LiDiff) as the teacher model as well as the teacher assistant models. Download the pre-trained weights from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/lidiff_ddpo_refined.ckpt`.
+We use the diffusion-dpo fine-tuned version of [LiDiff](https://github.com/PRBonn/LiDiff) as the teacher model as well as the teacher assistant models. Download the pre-trained weights from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/lidiff_ddpo_refined.ckpt`.
 
 Once the sequences map is generated and the teacher model is downloaded you can then train the model. The training can be started with:
 
@@ -82,7 +82,9 @@ Once the sequences map is generated and the teacher model is downloaded you can 
 
 ## **Inference & Visualization**
 
-First, download the refinement model 'refine_net.ckpt' from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/refine_net.ckpt`.
+We use [pyrender](https://github.com/mmatl/pyrender) for offscreen rendering. Please see [this guide](https://pyrender.readthedocs.io/en/latest/install/index.html#osmesa) for installation of pyrender.
+
+After correct installtion of pyrender, download the refinement model 'refine_net.ckpt' from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/refine_net.ckpt`.
 
 Then run the inference script with the following command:
 
