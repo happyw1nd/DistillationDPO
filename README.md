@@ -3,7 +3,7 @@
 # 💡**DistillationDPO**💡
 ## **[Diffusion Distillation With Direct Preference Optimization For Efficient 3D LiDAR Scene Completion](#)**
 
-by An Zhao<sup>1</sup>, *[Shengyuan Zhang](https://github.com/SYZhang0805)<sup>1</sup>, [Ling Yang](https://github.com/YangLing0818)<sup>2</sup>, [Zejian Li*](https://zejianli.github.io/)<sup>1</sup>, Jiale Wu<sup>1</sup>, Haoran Xu<sup>3</sup>, AnYang Wei<sup>3</sup>,Perry Pengyun GU<sup>3</sup>, [Lingyun Sun](https://person.zju.edu.cn/sly)<sup>1</sup>*
+by *An Zhao<sup>1</sup>, [Shengyuan Zhang](https://github.com/SYZhang0805)<sup>1</sup>, [Ling Yang](https://github.com/YangLing0818)<sup>2</sup>, [Zejian Li*](https://zejianli.github.io/)<sup>1</sup>, Jiale Wu<sup>1</sup>, Haoran Xu<sup>3</sup>, AnYang Wei<sup>3</sup>,Perry Pengyun GU<sup>3</sup>, [Lingyun Sun](https://person.zju.edu.cn/sly)<sup>1</sup>*
 
 *<sup>1</sup>Zhejiang University <sup>2</sup>Peking University <sup>3</sup>Zhejiang Green Zhixing Technology co., ltd*
 
