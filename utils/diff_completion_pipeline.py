@@ -363,35 +363,3 @@ def load_pcd(pcd_file):
         return np.array(o3d.io.read_point_cloud(pcd_file).points)
     else:
         print(f"Point cloud format '.{pcd_file.split('.')[-1]}' not supported. (supported formats: .bin (kitti format), .ply)")
-
-@click.command()
-@click.option('--diff', '-d', type=str, default='checkpoints/ScoreLiDAR_diff_net.ckpt', help='diff model ckpt path')
-@click.option('--refine', '-r', type=str, default='checkpoints/refine_net.ckpt', help='refine model ckpt path')
-@click.option('--denoising_steps', '-T', type=int, default=8, help='number of denoising steps')
-@click.option('--cond_weight', '-s', type=float, default=2.0, help='conditioning weight')
-def main(diff, refine, denoising_steps, cond_weight):
-    exp_dir = diff.split('/')[-1].split('.')[0].replace('=','') + f'_T{denoising_steps}_s{cond_weight}'
-
-    diff_completion = DiffCompletion_DistillationDPO(diff, refine, denoising_steps, cond_weight)
-
-    path = './datasets/test/'
-    os.makedirs(f'./results/{exp_dir}', exist_ok=True)
-
-    for pcd_path in tqdm.tqdm(natsorted(os.listdir(path))):
-        pcd_file = os.path.join(path, pcd_path)
-        points = load_pcd(pcd_file)
-    
-        refine_scan, diff_scan = diff_completion.complete_scan(points)
-
-        pcd_diff = o3d.geometry.PointCloud()
-        pcd_diff.points = o3d.utility.Vector3dVector(diff_scan)
-        pcd_diff.estimate_normals()
-        o3d.io.write_point_cloud(f'./results/{exp_dir}/{pcd_path.split(".")[0]}_diff.ply', pcd_diff)
-
-        pcd_refine = o3d.geometry.PointCloud()
-        pcd_refine.points = o3d.utility.Vector3dVector(refine_scan)
-        pcd_refine.estimate_normals()
-        o3d.io.write_point_cloud(f'./results/{exp_dir}/{pcd_path.split(".")[0]}_refine.ply', pcd_refine)
-
-if __name__ == '__main__':
-    main()
