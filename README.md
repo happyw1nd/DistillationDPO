@@ -7,7 +7,7 @@ by *An Zhao<sup>1</sup>, [Shengyuan Zhang](https://github.com/SYZhang0805)<sup>1
 
 *<sup>1</sup>Zhejiang University <sup>2</sup>Peking University <sup>3</sup>Zhejiang Green Zhixing Technology co., ltd*
 
-![](./pics/teaser2.png)
+![](./pics/teaser.png)
 
 </div>
 
