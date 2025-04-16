@@ -97,7 +97,15 @@ This script will read all scenes in a sepcified sequence of SemanticKITTI datase
 If you find our paper useful or relevant to your research, please kindly cite our papers:
 
 ```bibtex
-TODO
+@misc{zhao2025diffusiondistillationdirectpreference,
+    title={Diffusion Distillation With Direct Preference Optimization For Efficient 3D LiDAR Scene Completion}, 
+    author={An Zhao and Shengyuan Zhang and Ling Yang and Zejian Li and Jiale Wu and Haoran Xu and AnYang Wei and Perry Pengyun GU and Lingyun Sun},
+    year={2025},
+    eprint={2504.11447},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2504.11447}, 
+}
 ```
 
 ## **Credits**
