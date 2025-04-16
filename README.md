@@ -84,7 +84,7 @@ Once the sequences map is generated and the teacher model is downloaded you can 
 
 We use [pyrender](https://github.com/mmatl/pyrender) for offscreen rendering. Please see [this guide](https://pyrender.readthedocs.io/en/latest/install/index.html#osmesa) for installation of pyrender.
 
-After correct installtion of pyrender, download the refinement model 'refine_net.ckpt' from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/refine_net.ckpt`. We also provide the pre-trained weights of distillation-dpo. Download 'distillationdpo_st.ckpt' from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/distillationdpo_st.ckpt`.
+After correct installation of pyrender, download the refinement model 'refine_net.ckpt' from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/refine_net.ckpt`. We also provide the pre-trained weights of distillation-dpo. Download 'distillationdpo_st.ckpt' from [here](https://drive.google.com/drive/folders/1z7Iq6nPDZXtASUDP8R8sqhUAvVfRqKQH?usp=sharing) and place it at `checkpoints/distillationdpo_st.ckpt`.
 
 Then run the inference script with the following command:
 
